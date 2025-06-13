@@ -10,4 +10,13 @@ interface Job {
   updated_at: string;
 }
 
-export type { Job };
+interface Company {
+  id: number;
+  name: string;
+  average_salary: number;
+  jobs: Job[];
+  high_salary_jobs_count: number;
+  description: string;
+}
+
+export type { Job, Company };
