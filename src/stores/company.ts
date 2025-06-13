@@ -7,8 +7,9 @@ const useCompanyStore = defineStore("company", {
     fetchCompanies() {
       return ApiService.get("/companies");
     },
-    fetchCompany(id: number) {
-      return ApiService.get(`/companies/${id}`);
+    async fetchCompany(id: number) {
+      const res = await ApiService.get(`/companies/${id}`);
+      return res.data;
     },
   },
 });
