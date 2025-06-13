@@ -1,5 +1,7 @@
+<script setup lang="ts"></script>
+
 <template>
   <header class="bg-white text-black p-4 flex justify-center">
-    <p>105 咪 Go! 求職網</p>
+    <a href="/"><img src="@/assets/header_icon.png" class="h-10" /></a>
   </header>
 </template>
