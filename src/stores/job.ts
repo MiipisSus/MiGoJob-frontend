@@ -16,6 +16,14 @@ const useJobStore = defineStore("job", {
         console.error("Error fetching jobs:", error);
       }
     },
+    async fetchJob(id: number) {
+      try {
+        const res = await ApiService.get(`/jobs/${id}`);
+        return res.data;
+      } catch (error) {
+        console.error("Error fetching job:", error);
+      }
+    },
   },
 });
 
